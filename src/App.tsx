@@ -1,17 +1,10 @@
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQuery,
-} from '@tanstack/react-query'
-
-import React from 'react'
-
-const queryClient = new QueryClient()
+import React from "react";
+import fetchWeather from "./requests/fetchWeather";
+import { useQuery } from "@tanstack/react-query";
 export default function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <div className='text-black'>App start</div>
-    </QueryClientProvider>
+  const { data, error } = useQuery(["weather", "london"], () =>
+    fetchWeather("london")
+  );
 
-  )
+  return <div className="text-black">App start</div>;
 }
