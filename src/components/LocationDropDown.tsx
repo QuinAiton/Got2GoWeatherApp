@@ -1,10 +1,13 @@
 import { useState } from "react";
 
-type PropTypes ={ 
+type PropTypes = {
   setSelectedLocation: (location: string) => void;
   selectLocation: string;
-} 
-export default function LocationDropDown({setSelectedLocation, selectLocation}:PropTypes) {
+};
+export default function LocationDropDown({
+  setSelectedLocation,
+  selectLocation,
+}: PropTypes) {
   const [showOptions, setShowOptions] = useState(false);
 
   const handleSelectLocation = (location: string) => {

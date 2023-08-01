@@ -11,7 +11,7 @@ export default function WeatherTile({
   selectedLocation,
 }: PropTypes) {
   const { description, icon, feels_like, humidity, temp, wind_speed, date } =
-    weatherData;
+    weatherData || "";
   return (
     <div className=" flex items-center justify-center">
       <div className="flex flex-col bg-white rounded p-4 w-full max-w-xs">

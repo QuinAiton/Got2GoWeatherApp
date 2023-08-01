@@ -1,5 +1,4 @@
 export type weatherData = {
-  weather: string;
   description: string;
   icon: string;
   feels_like: number;
