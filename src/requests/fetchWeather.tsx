@@ -2,7 +2,7 @@ import cleanWeatherData from "../utils/cleanWeatherData";
 
 export default async function fetchWeather(location: string) {
   try {
-    const url = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=${location}&limit=5&appid=${
+    const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${location}&limit=5&appid=${
       import.meta.env.VITE_OPEN_WEATHER_KEY
     }`;
     const response = await fetch(url);
