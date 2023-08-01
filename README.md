@@ -17,7 +17,8 @@ retrieve the weather data. Documentation explaining authentication, usage, and w
 condition icon selection is available on their website.
 
 To run:
-yarn && yarn start
+copy .env-sample to an .env file and add the appropriate keys
+run yarn && yarn start
 
 to keep in mind:
 
