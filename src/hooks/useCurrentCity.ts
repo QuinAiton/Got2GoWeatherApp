@@ -39,7 +39,7 @@ export default function useCurrentCity(): CurrentCityData {
           }
         );
       } catch (error) {
-        setError(error);
+        setError(error as Error);
       }
     };
 
