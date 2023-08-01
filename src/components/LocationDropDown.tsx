@@ -59,7 +59,7 @@ export default function LocationDropDown({
             {shouldShowOption("Miami") && (
               <button
                 onClick={() => handleSelectLocation("Miami")}
-                className="text-gray-700 block px-4 py-2 text-sm"
+                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
                 role="menuitem"
                 id="menu-item-0"
               >
@@ -69,7 +69,7 @@ export default function LocationDropDown({
             {shouldShowOption("New York") && (
               <button
                 onClick={() => handleSelectLocation("New York")}
-                className="text-gray-700 block px-4 py-2 text-sm"
+                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
                 role="menuitem"
                 id="menu-item-1"
               >
@@ -79,7 +79,7 @@ export default function LocationDropDown({
             {shouldShowOption("Los Angeles") && (
               <button
                 onClick={() => handleSelectLocation("Los Angeles")}
-                className="text-gray-700 block px-4 py-2 text-sm"
+                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
                 role="menuitem"
                 id="menu-item-2"
               >
@@ -89,7 +89,7 @@ export default function LocationDropDown({
             {city && shouldShowOption(city) && (
               <button
                 onClick={() => handleSelectLocation(city)}
-                className="text-gray-700 block px-4 py-2 text-sm"
+                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
                 role="menuitem"
                 id="menu-item-2"
               >

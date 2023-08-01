@@ -31,7 +31,7 @@ export default function App() {
     <div className="bg-[url('/public/assets/background.jpg')] bg-center w-screen h-screen flex justify-center items-center p-20">
       {(fetchingWeather || isLoading) && <Spinner />}
       {!fetchingWeather && !isLoading && data && (
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-10">
           <LocationDropDown
             setSelectedLocation={setSelectedLocation}
             selectLocation={selectLocation}
