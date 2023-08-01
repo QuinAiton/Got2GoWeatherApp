@@ -20,6 +20,7 @@ To run:
 yarn && yarn start
 
 to keep in mind:
-1) default is to users browser location 
-2) since it would be weird for this location to no longer be selectable after selecting a new location I added it to the dropdown as well
-3) I did not know if I should be writing tests for everything, so for the sake of time I decided to not write tests, but I am happy to write them if required
+
+1. default is to users browser location
+2. since it would be weird for this location to no longer be selectable after selecting a new location I added it to the dropdown as well
+3. I did not know if I should be writing tests for everything, so for the sake of time I decided to not write tests, but I am happy to write them if required
