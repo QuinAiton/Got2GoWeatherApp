@@ -6,4 +6,5 @@ export type weatherData = {
   temp: number;
   wind_speed: number;
   date: string;
+  name: string;
 };

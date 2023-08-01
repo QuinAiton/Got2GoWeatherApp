@@ -1,11 +1,11 @@
 import getDate from "./getDate";
 import { rawWeatherData } from "src/types/rawWeatherData";
 export default function cleanWeatherData(rawWeatherData: rawWeatherData) {
-  const { weather, main, wind } = rawWeatherData;
+  const { weather, main, wind, name, dt, timezone } = rawWeatherData;
   const [{ description, icon }] = weather;
   const { temp, feels_like, humidity } = main;
   const { speed: wind_speed } = wind;
-  const date = getDate(rawWeatherData.dt, rawWeatherData.timezone);
+  const date = getDate(dt, timezone);
   return {
     description,
     icon,
@@ -14,5 +14,6 @@ export default function cleanWeatherData(rawWeatherData: rawWeatherData) {
     humidity,
     wind_speed,
     date,
+    name,
   };
 }

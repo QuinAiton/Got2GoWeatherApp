@@ -15,4 +15,5 @@ export type rawWeatherData = {
   };
   timezone: string;
   dt: string;
+  name: string;
 };

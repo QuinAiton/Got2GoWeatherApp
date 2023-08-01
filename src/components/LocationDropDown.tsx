@@ -3,10 +3,12 @@ import { useState } from "react";
 type PropTypes = {
   setSelectedLocation: (location: string) => void;
   selectLocation: string;
+  city: string | null;
 };
 export default function LocationDropDown({
   setSelectedLocation,
   selectLocation,
+  city,
 }: PropTypes) {
   const [showOptions, setShowOptions] = useState(false);
 
@@ -82,6 +84,16 @@ export default function LocationDropDown({
                 id="menu-item-2"
               >
                 Los Angeles
+              </button>
+            )}
+            {city && shouldShowOption(city) && (
+              <button
+                onClick={() => handleSelectLocation(city)}
+                className="text-gray-700 block px-4 py-2 text-sm"
+                role="menuitem"
+                id="menu-item-2"
+              >
+                {city}{" "}
               </button>
             )}
           </div>
