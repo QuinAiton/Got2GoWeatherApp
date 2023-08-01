@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 
 import LocationDropDown from "components/LocationDropDown";
 import Spinner from "components/Spinner";
@@ -38,6 +38,11 @@ export default function App() {
             city={city}
           />
           <WeatherTile weatherData={data} />
+        </div>
+      )}
+      {(weatherError as ReactNode) && (
+        <div className="flex justify-center items-center">
+          Unable to fetch weather data..
         </div>
       )}
     </div>

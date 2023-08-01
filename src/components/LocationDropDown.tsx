@@ -21,6 +21,13 @@ export default function LocationDropDown({
     return title !== selectLocation;
   };
 
+  const menuOptions: { value: string }[] = [
+    { value: "Miami" },
+    { value: "New York" },
+    { value: "Los Angeles" },
+    // Add more options as needed
+  ];
+
   return (
     <div className="relative inline-block text-left">
       <div>
@@ -56,36 +63,22 @@ export default function LocationDropDown({
           aria-labelledby="menu-button"
         >
           <div className="py-1" role="none">
-            {shouldShowOption("Miami") && (
-              <button
-                onClick={() => handleSelectLocation("Miami")}
-                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
-                role="menuitem"
-                id="menu-item-0"
-              >
-                Miami
-              </button>
-            )}
-            {shouldShowOption("New York") && (
-              <button
-                onClick={() => handleSelectLocation("New York")}
-                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
-                role="menuitem"
-                id="menu-item-1"
-              >
-                New York
-              </button>
-            )}
-            {shouldShowOption("Los Angeles") && (
-              <button
-                onClick={() => handleSelectLocation("Los Angeles")}
-                className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
-                role="menuitem"
-                id="menu-item-2"
-              >
-                Los Angeles
-              </button>
-            )}
+            {menuOptions.map((option, index) => {
+              const { value } = option;
+              return (
+                shouldShowOption(value) && (
+                  <button
+                    key={value}
+                    onClick={() => handleSelectLocation(value)}
+                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
+                    role="menuitem"
+                    id={`menu-item-${index}`}
+                  >
+                    {value}
+                  </button>
+                )
+              );
+            })}
             {city && shouldShowOption(city) && (
               <button
                 onClick={() => handleSelectLocation(city)}
@@ -93,7 +86,7 @@ export default function LocationDropDown({
                 role="menuitem"
                 id="menu-item-2"
               >
-                {city}{" "}
+                {city}
               </button>
             )}
           </div>

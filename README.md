@@ -10,10 +10,16 @@ The widget needs to have the following components:
 [x] An icon representing the weather condition in the city.
 [x] A dropdown menu which allows the user to change the selected city (Miami, New York,
 or Los Angeles).
-[] (Optional) Instead of defaulting to Miami, auto-detect the user's location.
+[x] (Optional) Instead of defaulting to Miami, auto-detect the user's location.
 
 Please use the free version of the Open Weather API (https://openweathermap.org/api) to
 retrieve the weather data. Documentation explaining authentication, usage, and weather
 condition icon selection is available on their website.
-Once completed, please share the code (hosted in GitHub or similar) with
-nick.pestov@got2go.com.
+
+To run:
+yarn && yarn start
+
+to keep in mind:
+1) default is to users browser location 
+2) since it would be weird for this location to no longer be selectable after selecting a new location I added it to the dropdown as well
+3) I did not know if I should be writing tests for everything, so for the sake of time I decided to not write tests, but I am happy to write them if required
