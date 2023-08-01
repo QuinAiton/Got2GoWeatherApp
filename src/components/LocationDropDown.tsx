@@ -79,7 +79,8 @@ export default function LocationDropDown({
                 )
               );
             })}
-            {city && shouldShowOption(city) && (
+
+            {city && city !== "Miami" && shouldShowOption(city) && (
               <button
                 onClick={() => handleSelectLocation(city)}
                 className="text-gray-700 block px-4 py-2 text-sm hover:bg-indigo-500 w-full hover:text-white"
@@ -95,4 +96,3 @@ export default function LocationDropDown({
     </div>
   );
 }
-// Miami, New York, or Los Angeles
