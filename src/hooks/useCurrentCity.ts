@@ -43,8 +43,11 @@ export default function useCurrentCity(): CurrentCityData {
       }
     };
 
-    getCurrentCity();
+    getCurrentCity().catch((error) => {
+      setError(error as Error);
+      setCity("Miami");
+    });
   }, []);
 
-  return { city, error };
+  return { city: city || "Miami", error };
 }
